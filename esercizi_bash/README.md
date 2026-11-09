@@ -9,7 +9,7 @@ Ho provato poi a lanciare touch /home/vincenzo/prova/file.txt e mi dice che non 
 
 Esercizio 2
 
-■ NumeroProcessi:Contare il numero totale di processi attualmente in esecuzione sulla propria macchina senza utilizzare utility interattive come "top".
+■ NumeroProcessi: Contare il numero totale di processi attualmente in esecuzione sulla propria macchina senza utilizzare utility interattive come "top".
 
 Per contare il numero totale di processi attualmente in esecuzione ho utilizzato il comando:
 ps -e | wc -l
