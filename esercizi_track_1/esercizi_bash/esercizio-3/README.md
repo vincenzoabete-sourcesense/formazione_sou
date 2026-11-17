@@ -7,5 +7,6 @@
 - ```var_2=$(rpm -q kernel --qf ‘%{VERSION}-%{RELEASE}.%{ARCH}\n’)``` 
 Ho utilizzato anche questa versione per avere la stessa stringa presentata dal comando uname -r.
 
-Stringhe da confrontare: **5.14.0-687.10.1.el9_8.0.1.x86_64**   **kernel-5.14.0-687.10.1.el9_8.0.1.x86_64**
+Stringhe da confrontare: **5.14.0-687.10.1.el9_8.0.1.x86_64**         
+**kernel-5.14.0-687.10.1.el9_8.0.1.x86_64**
 
