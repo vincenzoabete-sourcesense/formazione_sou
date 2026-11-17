@@ -24,7 +24,7 @@ Output desiderato:
 
 
 
-- Lo script ottiene lo stesso output del comando in alto utilizzando delle strutture di controllo.
+- Lo script_banana.sh ottiene lo stesso output del comando in alto utilizzando delle strutture di controllo.
 
 - Inizialmente, lo script prende in input il file **fruit.csv** che presenta le righe da analizzare ed esegue un ciclo **while** andando a leggere ogni riga del suddetto file.
 
