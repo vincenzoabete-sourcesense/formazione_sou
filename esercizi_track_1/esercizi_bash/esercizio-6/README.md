@@ -24,11 +24,11 @@ Output desiderato:
 
 
 
-- Lo script_banana.sh ottiene lo stesso output del comando in alto utilizzando delle strutture di controllo.
+- Lo **script_banana.sh** ottiene lo stesso output del comando in alto utilizzando delle strutture di controllo.
 
-- Inizialmente, lo script prende in input il file **fruit.csv** che presenta le righe da analizzare ed esegue un ciclo **while** andando a leggere ogni riga del suddetto file.
+- Inizialmente, lo script prende in input il file **fruit.csv** che presenta le righe da analizzare ed esegue un ciclo **while** andando a leggere ogni riga del suddetto file. ```while read riga; do``` ```done < fruit.csv```
 
-- L’istruzione condizionale **if** controlla se all’interno della riga in esame sia presente la stringa **“banana”**. Gli asterischi ```*"banana"*``` permettono di evidenziare la stringa banana in una riga contenente altre parole e segni speciali . 
+- L’istruzione condizionale **if** controlla se all’interno della riga in esame sia presente la stringa **“banana”**. Gli asterischi ```*"banana"*``` permettono di evidenziare la stringa banana in una riga contenente altre parole e segni speciali. ```if [[ "$riga" == *"banana"* ]]; then```
 
-- Se la stringa banana viene identificata all’interno di una riga, viene stampata l’ultima colonna (la terza) grazie al comando ```awk```, il parametro **-F** che identifica il carattere **“,”**  e ```'{print $3}’``` come svolto nell’esercizio precedente.   
+- Se la stringa banana viene identificata all’interno di una riga, viene stampata l’ultima colonna (la terza) grazie al comando ```awk```, il parametro **-F** che identifica il carattere **“,”**  e ```'{print $3}’``` come svolto nell’esercizio precedente. ```echo "$riga" | awk -F',' '{print $3}'```
 
