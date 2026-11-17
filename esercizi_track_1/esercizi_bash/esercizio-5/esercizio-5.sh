@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 
@@ -17,7 +16,7 @@ contatore()
 
         while (( i <= $1 )); do    # finchè variabile contatore è minore o uguale all'argomento passato in input, eseguo il ciclo
 
-            if (( i % 2 == 0 )); then # se il modulo ottenuto dalla divisione per due della variabile contatore è zero, ho un numero pari altrimenti dispari
+            if (( i % 2 == 0 )); then # se il modulo ottenuto dalla divisione per due della variabile contatore è zero, ho un numero pari altrimenti dispari 
                 echo "$i Pari"
             else
                 echo "$i Dispari"
