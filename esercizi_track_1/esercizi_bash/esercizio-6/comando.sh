@@ -1,0 +1,1 @@
+awk -F',' '/banana/ {print $3}' fruit.csv
