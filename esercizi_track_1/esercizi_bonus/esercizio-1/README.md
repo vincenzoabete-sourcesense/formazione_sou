@@ -18,19 +18,18 @@ Ho creato con VIM il file csv con il nome, cognome, numeri di cellulare e città
 <br> <br>
 
 
-```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/presta/Presta/'``` 
+```awk -F',' '{print $2}' utenti.csv | grep "abete" | sed 's/abete/Abete/'``` 
 
 **OUTPUT**
 
-abete <br>
-Presta
+Abete
 
 
 - Ho provato prima questa versione in cui vado a filtrare la seconda colonna ```'{print $2}'``` andando a considerare la virgola come separatore nelle righe ```-F','``` usando il comando ```awk```
 
-- Mediante il comando ```grep -E```, considero la regex ```"abete|presta"``` in modo da prelevare dalla seconda colonna solo le righe che contengono abete o presta.
+- Mediante il comando ```grep```, ho selezionato soltanto il cognome abete
 
-- Mediante il comando ```sed``` sono andato a modificare il cognome presta in Presta in modo da stampare il cognome con la lettera maiuscola. <br> <br>
+- Mediante il comando ```sed``` sono andato a modificare il cognome abete in Abete in modo da stampare il cognome con la lettera maiuscola. <br> <br>
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep "abete" | sed 's/abete/Abete/' &&  awk -F',' '{print $2}' utenti.csv | grep "minelli" | sed 's/minelli/Minelli/'```
@@ -54,9 +53,11 @@ Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola 
 Abete<br>
 Presta
 
--La seconda versione è uguale nell’esecuzione dei comandi ```awk``` e ```grep```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
+-La seconda versione è uguale nell’esecuzione del comando ```awk```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
 
 -La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. <br> <br>
+
+- Mediante il comando ```grep -E```, considero la regex ```"abete|presta"``` in modo da prelevare dalla seconda colonna solo le righe che contengono abete o presta.
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep -E "abete|romano de mattia" | sed 's/\b./\U&/g'```
