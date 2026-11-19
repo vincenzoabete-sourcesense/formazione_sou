@@ -15,6 +15,18 @@ Deve essere tutto in pipe. <br> <br> <br>
 
 Ho creato con VIM il file utenti.csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
 
+```
+nome,cognome,numero cellulare,citta
+Vincenzo,abete,321,Napoli
+Mattia,minelli,456,Milano
+Giulio,romano de mattia,256,Roma
+Domenico,nasso,937,Parma
+Bernard,ramohitaj,749,Genova
+Viron,daiu,222,Verona
+Noemi,presta,092,Bari
+
+```
+
 <br> <br>
 
 
