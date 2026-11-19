@@ -11,7 +11,7 @@ Deve essere tutto in pipe. <br> <br> <br>
 
 **Svolgimento**
 
-**VERSIONE SEMPLIFICATA**
+**PRIMA VERSIONE**
 
 Ho creato con VIM il file utenti.csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
 
@@ -55,7 +55,7 @@ Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola 
 
 
 
-**VERSIONE MIGLIORATA** <br> <br>
+**SECONDA VERSIONE MIGLIORATA** <br> <br>
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/^./\U&/'```
