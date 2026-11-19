@@ -40,7 +40,7 @@ Presta
 Abete <br> 
 Minelli
 
-Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND** <br> <br> <br>
+Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**, ma selezionando uno alla volta ogni cognome con il comando grep. <br> <br> <br>
 
 
 
