@@ -34,7 +34,7 @@ Noemi,presta,092,Bari
 
 **OUTPUT**
 
-Abete
+```Abete```
 
 
 - Ho provato prima questa versione in cui vado a filtrare la seconda colonna ```'{print $2}'``` andando a considerare la virgola come separatore nelle righe ```-F','``` usando il comando ```awk```
@@ -48,8 +48,10 @@ Abete
 
 **OUTPUT**
 
-Abete <br> 
+```bash
+Abete
 Minelli
+```
 
 Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**, ma selezionando ogni cognome uno alla volta con il comando ```grep```. <br> <br> <br>
 
@@ -62,8 +64,10 @@ Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola 
 
 **OUTPUT**
 
-Abete<br>
+```bash
+Abete
 Presta
+```
 
 - La seconda versione è uguale nell’esecuzione del comando ```awk```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
 
@@ -76,8 +80,10 @@ Presta
 
 **OUTPUT**
 
-Abete <br>
+```bash
+Abete
 Romano De Mattia
+```
 
 Questa versione considera anche gli spazi nel cognome per cognomi composti, **\b** permette di considerare gli spazi tra il cognome prendendo l’inizio di ogni parola.
 L’opzione **/g** è necessaria adesso in quanto la sostituzione deve essere applicata più di una volta.
