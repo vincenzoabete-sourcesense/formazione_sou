@@ -22,7 +22,7 @@ Ho creato con VIM il file csv con il nome, cognome, numeri di cellulare e città
 
 **OUTPUT**
 
-abete
+abete <br>
 Presta
 
 
@@ -37,7 +37,7 @@ Presta
 
 **OUTPUT**
 
-Abete
+Abete <br> 
 Minelli
 
 Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND** <br> <br> <br>
@@ -51,7 +51,7 @@ Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola 
 
 **OUTPUT**
 
-Abete
+Abete<br>
 Presta
 
 -La seconda versione è uguale nell’esecuzione dei comandi ```awk``` e ```grep```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
@@ -63,7 +63,7 @@ Presta
 
 **OUTPUT**
 
-Abete
+Abete <br>
 Romano De Mattia
 
 Questa versione considera anche gli spazi nel cognome per cognomi composti, **\b** permette di considerare gli spazi tra il cognome prendendo l’inizio di ogni parola.
