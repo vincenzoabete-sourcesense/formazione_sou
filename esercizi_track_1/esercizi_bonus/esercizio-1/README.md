@@ -9,7 +9,7 @@ Nome,cognome,numero,città
 Bisogna estrarre la colonna cognome. La prima lettera deve diventare sempre maiuscola, selezionare solo due cognomi.
 Deve essere tutto in pipe. <br> <br> <br>
 
-**SVOLGIMENTO**
+**SVOLGIMENTO** <br> <br> 
 
 **PRIMA VERSIONE**
 
