@@ -1,1 +1,68 @@
-Esercizio 1
+# Esercizio 1
+
+**Traccia**
+
+Supponiamo che abbiamo un file csv con i vostri dati: 
+
+Nome,cognome,numero,città
+
+Bisogna estrarre la colonna cognome. La prima lettera deve diventare sempre maiuscola, selezionare solo due cognomi.
+Deve essere tutto in pipe.
+
+**Svolgimento**
+
+**VERSIONE SEMPLIFICATA**
+
+Ho creato con VIM il file csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
+
+
+```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/presta/Presta/'```
+
+**OUTPUT**
+
+abete
+Presta
+
+
+- Ho provato prima questa versione in cui vado a filtrare la seconda colonna ```'{print $2}'``` andando a considerare la virgola come separatore nelle righe ```-F','``` usando il comando ```awk```
+
+- Mediante il comando ```grep -E```, considero la regex ```"abete|presta"``` in modo da prelevare dalla seconda colonna solo le righe che contengono abete o presta.
+
+- Mediante il comando ```sed``` sono andato a modificare il cognome presta in Presta in modo da stampare il cognome con la lettera maiuscola.
+
+
+```awk -F',' '{print $2}' utenti.csv | grep "^abete" | sed 's/abete/Abete/' &&  awk -F',' '{print $2}' utenti.csv | grep "^minelli" | sed 's/minelli/Minelli/'```
+
+**OUTPUT**
+
+Abete
+Minelli
+
+Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**
+
+
+
+**VERSIONE MIGLIORATA**
+
+
+```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/^./\U&/'```
+
+**OUTPUT**
+
+Abete
+Presta
+
+-La seconda versione è uguale nell’esecuzione dei comandi ```awk``` e ```grep```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
+
+-La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. 
+
+
+```awk -F',' '{print $2}' utenti.csv | grep -E "abete|romano de mattia" | sed 's/\b./\U&/g'```
+
+**OUTPUT**
+
+Abete
+Romano De Mattia
+
+Questa versione considera anche gli spazi nel cognome per cognomi composti, **\b** permette di considerare gli spazi tra il cognome prendendo l’inizio di ogni parola.
+L’opzione **/g** è necessaria adesso in quanto la sostituzione deve essere applicata più di una volta.
