@@ -53,9 +53,9 @@ Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola 
 Abete<br>
 Presta
 
--La seconda versione è uguale nell’esecuzione del comando ```awk```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
+- La seconda versione è uguale nell’esecuzione del comando ```awk```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
 
--La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. <br> <br>
+- La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. <br> <br>
 
 - Mediante il comando ```grep -E```, considero la regex ```"abete|presta"``` in modo da prelevare dalla seconda colonna solo le righe che contengono abete o presta.
 
