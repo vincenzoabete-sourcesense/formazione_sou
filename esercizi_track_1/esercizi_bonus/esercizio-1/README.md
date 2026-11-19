@@ -39,7 +39,7 @@ Abete
 Abete <br> 
 Minelli
 
-Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**, ma selezionando ogni cognome uno alla con il comando grep. <br> <br> <br>
+Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**, ma selezionando ogni cognome uno alla con il comando ```grep```. <br> <br> <br>
 
 
 
