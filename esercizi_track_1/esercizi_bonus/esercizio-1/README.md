@@ -7,7 +7,7 @@ Supponiamo che abbiamo un file csv con i vostri dati:
 Nome,cognome,numero,città
 
 Bisogna estrarre la colonna cognome. La prima lettera deve diventare sempre maiuscola, selezionare solo due cognomi.
-Deve essere tutto in pipe.
+Deve essere tutto in pipe. <br> <br> <br>
 
 **Svolgimento**
 
@@ -15,8 +15,10 @@ Deve essere tutto in pipe.
 
 Ho creato con VIM il file csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
 
+<br> <br>
 
-```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/presta/Presta/'```
+
+```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/presta/Presta/'``` 
 
 **OUTPUT**
 
@@ -28,7 +30,7 @@ Presta
 
 - Mediante il comando ```grep -E```, considero la regex ```"abete|presta"``` in modo da prelevare dalla seconda colonna solo le righe che contengono abete o presta.
 
-- Mediante il comando ```sed``` sono andato a modificare il cognome presta in Presta in modo da stampare il cognome con la lettera maiuscola.
+- Mediante il comando ```sed``` sono andato a modificare il cognome presta in Presta in modo da stampare il cognome con la lettera maiuscola. <br> <br>
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep "abete" | sed 's/abete/Abete/' &&  awk -F',' '{print $2}' utenti.csv | grep "minelli" | sed 's/minelli/Minelli/'```
@@ -38,11 +40,11 @@ Presta
 Abete
 Minelli
 
-Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND**
+Questo comando permette di prendere entrambi i cognomi con la lettera maiuscola ripetendo l’azione con una **AND** <br> <br> <br>
 
 
 
-**VERSIONE MIGLIORATA**
+**VERSIONE MIGLIORATA** <br> <br>
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep -E "abete|presta" | sed 's/^./\U&/'```
@@ -54,7 +56,7 @@ Presta
 
 -La seconda versione è uguale nell’esecuzione dei comandi ```awk``` e ```grep```, ma ho passato un’espressione regolare al comando sed in modo da trasformare in maiuscole tutte le prime lettere della colonna cognomi (in questo caso solo cognomi selezionati).
 
--La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. 
+-La ```sed``` va a sostituire il primo carattere trovato **^.** e lo va a sostituire con la sua maiuscola **\U**, **&** prende il carattere selezionato. <br> <br>
 
 
 ```awk -F',' '{print $2}' utenti.csv | grep -E "abete|romano de mattia" | sed 's/\b./\U&/g'```
