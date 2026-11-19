@@ -31,7 +31,7 @@ Presta
 - Mediante il comando ```sed``` sono andato a modificare il cognome presta in Presta in modo da stampare il cognome con la lettera maiuscola.
 
 
-```awk -F',' '{print $2}' utenti.csv | grep "^abete" | sed 's/abete/Abete/' &&  awk -F',' '{print $2}' utenti.csv | grep "^minelli" | sed 's/minelli/Minelli/'```
+```awk -F',' '{print $2}' utenti.csv | grep "abete" | sed 's/abete/Abete/' &&  awk -F',' '{print $2}' utenti.csv | grep "minelli" | sed 's/minelli/Minelli/'```
 
 **OUTPUT**
 
