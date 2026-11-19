@@ -13,7 +13,7 @@ Deve essere tutto in pipe. <br> <br> <br>
 
 **VERSIONE SEMPLIFICATA**
 
-Ho creato con VIM il file csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
+Ho creato con VIM il file utenti.csv con il nome, cognome, numeri di cellulare e città dei membri della Academy 8
 
 <br> <br>
 
